@@ -1,0 +1,43 @@
+/*Tag Selectors*/
+body{
+    background-color: gray;
+}
+
+
+img:hover{
+    border: 2px solid #d98d29;
+    background-color: gold;
+}
+
+
+/*Class selectors*/
+/*Class can be assigned to multiple element so you can group multiple '
+element that are going to have same style together
+HTML elements can have more than one class
+*/
+
+.bacon {
+background-color: red;
+}
+
+.broccoli{
+background-color: green;
+}
+
+.circular {
+    border-radius: 100%;
+}
+
+/*ID selectors*/
+/*ID for selecting a single element, can only be assign to one element
+HTML element can only have one ID
+*/
+
+#heading {
+    color: blue
+    ;
+}
+
+#heading:hover{
+    color: red;
+}
