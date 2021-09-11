@@ -1,5 +1,11 @@
 body{
     margin: 0;
+    text-align: center;
+}
+
+h1{
+    width: 30%;
+    margin: 0 auto 0 auto;
 }
 div{
     background-color: #DBE2EF;
@@ -8,33 +14,38 @@ div{
 
 
 .topContainer{
-    height: 200px;
-    width: 200px;
     background-color: #DBE2EF;
-    position: absolute;
-    top: 400px;
-    left: 400px;
+    position: relative;
+    padding-top: 100px;
 }
 
 .middleContainer{
     height: 200px;
     width: 200px;
     background-color: orange;
-    position: absolute;
-    top: 200px;
-    left: 200px;
+
 }
 
 .buttonContainer{
     height: 200px;
     width: 200px;
     background-color: green;
-    position: absolute;
-    top: 0;
-    left: 0;
+
 }
 
 .softwareEngineer{
 text-decoration: underline;
 
+}
+
+.top-cloud{
+    position:absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.button-cloud {
+    position:absolute;
+    left: 300px;
+    bottom: 300px;
 }
