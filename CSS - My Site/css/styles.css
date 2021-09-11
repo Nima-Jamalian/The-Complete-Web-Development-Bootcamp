@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+div{
+    background-color: #DBE2EF;
+
+}
+
+
+.topContainer{
+    height: 200px;
+    width: 200px;
+    background-color: #DBE2EF;
+    position: absolute;
+    top: 400px;
+    left: 400px;
+}
+
+.middleContainer{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.buttonContainer{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.softwareEngineer{
+text-decoration: underline;
+
+}
