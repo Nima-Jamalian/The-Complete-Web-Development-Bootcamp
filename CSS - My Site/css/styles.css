@@ -19,11 +19,23 @@ h3{
 }
 
 div{
-    background-color: #DBE2EF;
+
 
 }
 
-
+#profilePic{
+ width: 200px;
+ height: 200px;
+}
+#unityPic{
+    width: 300px;
+    height: 300px;
+}
+#webDevPic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
 .topContainer{
     background-color: #DBE2EF;
     position: relative;
@@ -31,16 +43,11 @@ div{
 }
 
 .middleContainer{
-    height: 200px;
-    width: 200px;
-    background-color: orange;
+
 
 }
 
 .buttonContainer{
-    height: 200px;
-    width: 200px;
-    background-color: green;
 
 }
 
