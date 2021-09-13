@@ -3,19 +3,46 @@ body{
     text-align: center;
     font-family: 'Merriweather', serif;
 }
+/*
+    If you want the text to be dynamic and change based on the user browser settings
+    we should use percentage. 100% = 16px
+    font-size: 100% ----> 16px
 
+    or you can use em
+    1 em = 16px
+    font-size: 1em; ----> 16px
+
+    note using this method we are inheriting the setting from body
+    for example if we set the body font-size: 200%
+
+    and then set the h1 also font-size: 200% the the h1 actual font size would be 400%
+    cause it is inheriting the original size form body
+
+    to prevent this we can use rem which work just like em but we don't inherit from body
+    the r stand for root
+*/
 h1{
     width: 30%;
     margin: 0 auto 0 auto;
     font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+    color: #66BFBF;
+ 
 }
 
+/*
+setting line height from top and button, you only input the number no need for px or %
+   line-height: 2;
+*/
 h2{
     font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
 }
 
 h3{
     font-family: 'Montserrat', sans-serif;
+    color: #11999E;
 }
 
 div{
@@ -53,7 +80,10 @@ div{
 
 .softwareEngineer{
 text-decoration: underline;
+}
 
+.subtitle{
+    font-weight: normal;
 }
 
 .top-cloud{
