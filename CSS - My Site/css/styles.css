@@ -44,7 +44,18 @@ h3{
     font-family: 'Montserrat', sans-serif;
     color: #11999E;
 }
+p{
+    color: #40514E;
+}
 
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    border-color:#EAF6F6;
+    border-width: 10px;
+    width: 20%;
+    margin: 5% auto 5% auto;
+}
 div{
 
 
@@ -53,31 +64,65 @@ div{
 #profilePic{
  width: 200px;
  height: 200px;
+ margin: 5% auto 1% auto;
 }
 #unityPic{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 30px;
 }
+/*
+.unity-skill-description{
+   padding-left: 30%;
+}*/
+
 #webDevPic{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    /*width: 25%;*/
+    float: right;
+    margin-left: 30px;
     border-radius: 50%;
 }
-.topContainer{
-    background-color: #DBE2EF;
-    position: relative;
-    padding-top: 100px;
-}
+
+/*
+.web-development-description{
+    padding-right: 30%;
+}*/
+
+
 
 .middleContainer{
 
 
 }
 
-.buttonContainer{
-
+.skill-row{
+    width: 50%;
+    margin: 3.75rem auto 3.125rem auto;
+    text-align: left;
+    line-height: 2;
 }
 
+.topContainer{
+    background-color: #EAF6F6;
+    position: relative;
+    padding-top: 100px;
+}
+.bottom-container{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #66BFBF;
+}
+
+.footer-link{
+    color:#11999E ;
+}
+
+.credit{
+    color:#EAF6F6;
+}
 .softwareEngineer{
 text-decoration: underline;
 }
@@ -97,3 +142,33 @@ text-decoration: underline;
     left: 300px;
     bottom: 300px;
 }
+
+.BUTTON_TLB {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 0;
+    line-height: 0;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    width: 133px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 24px;
+    background-color: #66BFBF;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: 40px auto 50px auto;
+ }
+ 
+ .BUTTON_TLB:hover {
+    background: #5DABAB;
+    border: solid #66BFBF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
