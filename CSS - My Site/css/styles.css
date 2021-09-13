@@ -2,6 +2,7 @@ body{
     margin: 0;
     text-align: center;
     font-family: 'Merriweather', serif;
+    color: #40514E;
 }
 /*
     If you want the text to be dynamic and change based on the user browser settings
@@ -44,8 +45,9 @@ h3{
     font-family: 'Montserrat', sans-serif;
     color: #11999E;
 }
+
 p{
-    color: #40514E;
+    line-height: 2;
 }
 
 hr{
@@ -56,25 +58,29 @@ hr{
     width: 20%;
     margin: 5% auto 5% auto;
 }
-div{
 
-
-}
 
 #profilePic{
  width: 200px;
  height: 200px;
- margin: 5% auto 1% auto;
 }
+
+.intro{
+width: 30%;
+margin: auto;
+}
+
 #unityPic{
     width: 200px;
     height: 200px;
     float: left;
     margin-right: 30px;
 }
+
 /*
 .unity-skill-description{
-   padding-left: 30%;
+  width: 100%;
+  margin: auto 200px auto 200px;
 }*/
 
 #webDevPic{
@@ -93,16 +99,15 @@ div{
 
 
 
-.middleContainer{
-
-
+.middle-container{
+    margin:50px 0;
 }
 
 .skill-row{
     width: 50%;
     margin: 3.75rem auto 3.125rem auto;
     text-align: left;
-    line-height: 2;
+
 }
 
 .topContainer{
@@ -112,16 +117,25 @@ div{
 }
 .bottom-container{
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 0.5%;
     background-color: #66BFBF;
 }
 
 .footer-link{
     color:#11999E ;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
 }
 
-.credit{
+.footer-link:hover{
+    color: #EAF6F6;
+}
+
+.copyright{
     color:#EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0px;
 }
 .softwareEngineer{
 text-decoration: underline;
@@ -134,13 +148,18 @@ text-decoration: underline;
 .top-cloud{
     position:absolute;
     right: 300px;
-    top: 50px;
+    top: 40px;
 }
 
 .button-cloud {
     position:absolute;
-    left: 300px;
+    left: 250px;
     bottom: 300px;
+}
+
+.contact-message{
+    width: 40%;
+    margin: auto;
 }
 
 .BUTTON_TLB {
@@ -150,9 +169,9 @@ text-decoration: underline;
     height: 0;
     line-height: 0;
     color: #FFFFFF;
-    font-family: Helvetica;
+    font-family: 'Montserrat', sans-serif;
     width: 133px;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 300;
     padding: 24px;
     background-color: #66BFBF;
@@ -160,12 +179,12 @@ text-decoration: underline;
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    margin: 40px auto 50px auto;
+    margin: 40px auto auto auto;
  }
  
  .BUTTON_TLB:hover {
     background: #5DABAB;
-    border: solid #66BFBF 1px;
+    border: solid #66BFBF 0px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
