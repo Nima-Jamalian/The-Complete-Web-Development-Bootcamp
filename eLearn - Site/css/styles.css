@@ -15,6 +15,12 @@
     width: 100%;
 }
 
+.lightTitle{
+    position: relative;
+    margin-top: 160px;
+    margin-left: 50px;
+}
+
 .navbar{
     min-height:50px;
 }
