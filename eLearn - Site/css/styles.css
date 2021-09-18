@@ -82,7 +82,7 @@
 
 /* Features Section */
 #features{
-   padding-top: 10px;
+   padding: 7% 5%;
 }
 .features-image{
     font-size: 4rem;
@@ -92,4 +92,17 @@
 
 .features-image:hover{
     color: #3F0071;
+}
+
+.features-h3{
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.features-col{
+    padding: 0 5%;
+}
+
+.features-p{
+    color: #8f8f8f;
 }
