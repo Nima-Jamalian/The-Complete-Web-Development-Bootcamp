@@ -26,6 +26,10 @@
     padding: 0 20px;
 }
 
+#NavBarLastItem{
+    padding-right: 0;
+}
+
 
 /* Title Section */
 
@@ -56,15 +60,36 @@
     width: 100%;
 }
 
-.btn{
+/* Buy Button */
+
+.buy-button{
     /*font-family: 'Ubuntu', sans-serif;*/
+    margin: 3% 3% 5% 0;
     background-color: #610094;
     border-color: #3F0071;
 }
 
 
-.btn:hover{
+.buy-button:hover{
     background-color: #3F0071;
     border-color: #3F0071;
 }
 
+.button-image{
+    transform: rotate(-25deg);
+    padding-right: 10px;
+}
+
+/* Features Section */
+#features{
+   padding-top: 10px;
+}
+.features-image{
+    font-size: 4rem;
+    padding: 20px 0;
+    color: #610094;
+}
+
+.features-image:hover{
+    color: #3F0071;
+}
