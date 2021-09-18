@@ -1,28 +1,41 @@
+.body{
+    font-family: 'Montserrat', sans-serif;
+}
 
+/* Navigation Bar */
 .logoimage{
     width: 8%;
 }
 
+
 .navbar{
-    font-family: 'Ubuntu', sans-serif;
+    /*font-family: 'Ubuntu', sans-serif;*/
+    padding:0 0 4rem;
+}
+
+#navbarContainer{
+    padding-right: 0;
+    padding-left: 0;
 }
 .navbar-brand{
     font-weight: 900;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.navbar-nav > li{
-    padding-left:20px;
-    padding-right:20px;
+.nav-item{
+    padding: 0 20px;
 }
+
+
+/* Title Section */
 
 #title{
     background-color: #141E61;
+    color: #EEEEEE;
 }
 
-
 .lightTitle{
-    color: #EEEEEE;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     line-height: 1.5;
@@ -35,8 +48,7 @@
 }
 
 .titleSectionText{
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
+    /*font-family: 'Ubuntu', sans-serif;*/
     font-size: 1.1rem;
 }
 
@@ -45,7 +57,7 @@
 }
 
 .btn{
-    font-family: 'Ubuntu', sans-serif;
+    /*font-family: 'Ubuntu', sans-serif;*/
     background-color: #610094;
     border-color: #3F0071;
 }
