@@ -55,6 +55,92 @@ typeof(23);*/
 //challenge covert doge age to human age
 //humanAge = (dogeAge - 2)*4 + 21
 
-var dogAge = console.log("Enter your doge age: ");
-var humanAge = (dogAge-2)*4 +21;
-alert("You dog human age is: " + humanAge);
+// var dogAge = prompt("Enter you dog age: ");
+// var humanAge = ((dogAge-2)*4) +21;
+// alert("You dog human age is: " + humanAge);
+
+//------------------------------------------------------------FUNCATION---------------------------------------
+// function SayHiToNima() {
+//     console.log("Hello, Nima");
+// }
+
+// SayHiToNima();
+
+
+
+//---------------------------------------------------------------
+// function getMilk(money) {   
+//   console.log("leaveHouse");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   var numberOfButtlesCanBuy = money/1.5
+//   console.log("Buy " + Math.floor(numberOfButtlesCanBuy) + " buttles of milk");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("enterHouse");
+// }
+
+// getMilk(5);//$1.5 per bottles
+
+
+//Return FUNCATION
+
+// function getMilk(money, cost) {   
+//   console.log("leaveHouse");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("Buy " + calcBottles(money,cost) + " buttles of milk");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("enterHouse");
+//   return calcChange(money,cost);
+// }
+
+// function calcBottles(startingMoney, costPerBottle){
+//   var numberOfBottles = Math.floor(startingMoney/costPerBottle);
+//   return numberOfBottles;
+// }
+
+// function calcChange(startingAmount, costPerBottle){
+//   var change = startingAmount % costPerBottle;
+//   return change
+// }
+
+// console.log("Change is: " + getMilk(5, 1.5) + "$");
+
+
+
+//---------------------------------------------------------------------------
+//Challenge BMW Calculator
+
+//BMI = weight(kg)/height^2 (m^2)
+
+function bmiCalculator(weight,height){
+  return Math.round(weight/(height*height));
+}
+
+console.log("My BMI is: " + bmiCalculator(65,1.8));
