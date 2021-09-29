@@ -52,4 +52,112 @@
 // Including punctuation and capitalisation.
 
 
-//---------------------------------------------------------------
+//---------------------------------------------------------------ARRAY
+
+// var guestList = ["Nima","Viola", "Samira","Mohammad","Nooshin"]
+
+// var guestName = window.prompt("Enter your name: ");
+// if(guestList.includes(guestName)){
+//     alert("Welcome to the party.");
+// } else {
+//      alert("Sorry you are not invited to this part.");
+// }
+
+
+//------------------FIZBUZZ Challeange---------------------
+// for(let i=0; i<=100; i++){
+//     if(i%3 == 0 && i%5 == 0){
+//         console.log("FizzBuzz");
+//     } else if(i%5 == 0){
+//         console.log("Buzz")
+//     } else if(i%3 == 0){
+//         console.log("Fizz");
+//     } else {
+//           console.log(i);
+//     }
+// }
+
+//Other way to imeplemnt this
+// var output = [];
+// var count = 1;
+// function fizzBuzz(){
+//     while (count <= 100){
+//         if(count % 3 === 0 && count % 5 ===0){
+//             output.push("FizzBuzz");
+//         } else if(count % 3 === 0){
+//             output.push("Fizz");
+//         } else if(count % 5 === 0){
+//             output.push("Buzz");
+//         } else {
+//             output.push(count);
+//         }
+//         count++;
+//     }
+//     console.log(output);
+// }
+
+
+//----------------------------------------
+// Who's Buying Lunch? Code Challenge
+// You are going to write a function which will select a random name from a list of names. The
+// person selected will have to pay for everybody's food bill.
+// Important: The output should e returned from the function and you do not need alert, prompt
+// or console.log. The output should match the example output exactly, including capitalisation
+// and punctuation.
+// Example Input
+// 1 ["Angela",
+// "Ben".
+// "Jenny",
+// "Michael", "Chloe"]
+// Example Output
+// 1
+// Michael is going to buy lunch today!
+// Hint
+// 1. You might need to think about Array.length.
+// 2. Remember that Arrays start at position 0!
+
+// function whosPaying(names) {
+// /******Don't change the code above*******/
+//     //Write your code here.
+//     var randomNum = Math.floor(Math.random() * names.length);
+//     return names[randomNum] + " is going to buy lunch today!";
+// /******Don't change the code below*******/    
+// }
+
+
+//----------------------------------------
+//99 Bottles beer song challange
+// function lyrics99(){
+//     var totallBottles = 99;
+//     var originalBottlesNumber = totallBottles;
+//     while (totallBottles > 0){
+//         console.log(totallBottles + " bottles of bear on the wall, " + totallBottles + " bottles of beer.");
+//         totallBottles--;
+//         if(totallBottles != 0){
+//            console.log("Take one down and pass it around, " + totallBottles + " bottles of bear on the wall");
+//         } else {
+//             console.log("Take one down and pass it around, no bottles of bear on the wall");
+//             console.log("No more bottles of beer on the wall, no more bottles of beer.");
+//             console.log("Go to the store and buy some more, " + originalBottlesNumber + " bottles of beer on the wall.");
+//         }
+//     }
+// }
+
+//----------------------------------------------------------BIG Challenge - FibonacciGenerator-----------------------------------------------------------
+function fibonacciGenerator (n) {
+    //Do NOT change any of the code above 👆
+        var output = [];
+        for(var i = 1; i<= n; i++){
+            if (i == 1){
+                output.push(0);
+            } else if (i == 2){
+                output.push(1);
+            } else {
+                var sumOfLastTwo = output[i-3] + output[i-2];
+                output.push(sumOfLastTwo);
+            }
+        }
+        //Return an array of fibonacci numbers starting from 0.
+        return output;
+    //Do NOT change any of the code below 👇
+    }
