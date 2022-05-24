@@ -1,37 +1,39 @@
-
-// module.exports = {
-//     DisplayElements: function(elementName,Show){
-//         const element = document.getElementsByClassName(elementName)[0];
-//         if(Show === true){
-//             element.classList.remove("hide");
-//             element.classList.add("show");
-//         } else {
-//             element.classList.remove("show");
-//             element.classList.add("hide");
-//         }
-//     }    
-// }
-
-const ws = new WebSocket('ws://www.host.com/path');
-
-ws.on('open', function open() {
-  ws.send('something');
+//Websocket connection to server
+//const ws = new WebSocket('ws://localhost:8080');
+var HOST = location.origin.replace(/^http/, 'ws')
+var ws = new WebSocket(HOST);
+ws.addEventListener("open", () => {
+    console.log("We are connected");
 });
 
-ws.on('message', function message(data) {
-  console.log('received: %s', data);
+ws.addEventListener("message", e => {
+    //console.log("Client received ", e.data);
+    if(e.data == "Succeeded"){
+        DisplayElements("alert-success",true);
+        DisplayElements("alert-fail",false);
+    } else {
+        DisplayElements("alert-fail",true);
+        DisplayElements("alert-success",false);
+    }
 });
 
-function TEST(elementName,Show){
+function DisplayElements(elementName,Show){
     var element =  document.getElementById(elementName);
     if(Show === true){
-        element.classList.remove(".hide");
+        element.classList.remove("hide");
         element.classList.add("show");
     } else {
         element.classList.remove("show");
         element.classList.add("hide");
     }
-    console.log("GOT CALLED");
 }    
 
-TEST("alert-success",false);
+
+
+// var form = document.getElementById("myForm");
+// form.addEventListener('submit', handleForm);
+// function handleForm(event) { 
+//     console.log("test")
+//     event.preventDefault(); 
+// } 
+
