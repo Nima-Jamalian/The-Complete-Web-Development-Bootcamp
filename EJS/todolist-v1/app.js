@@ -1,21 +1,38 @@
+//Setup
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-
+//Using EJS template 
+app.set("view engine", "ejs");
+//Use the body parser
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+//-------------------------------------------------
+//Variables 
+var items = ["Buy Food", "Cook Food", "Eat Food"];
+//-------------------------------------------------
+//App
 app.get("/", function(req,res){
     var today = new Date();
-    var currentDay = today.getDay();
+    var options = {
+        weekday: "long",
+        year: 'numeric',
+        day: "numeric",
+        month: "long"
+    };
+    var day = today.toLocaleDateString("en-US", options);
 
-    if(currentDay === 6 || currentDay === 0){
-        res.write("<h1>Yay it's the weekend!</h1>");
-    } else {
-        // res.write("<h1>It is not the weekend.</h1>");
-        // res.write("<h1>Boo! I have to work!😭 </h1>");
-        res.sendFile(__dirname + "/index.html");
-    }
-    //res.send();
+    res.render('list', {kindOfDay: day, newlistItems: items});
+});
+
+app.post("/", function(req,res){
+var item = req.body.newItem;
+console.log(item);
+items.push(item);
+res.redirect("/");//redirect to home route
 });
 
 app.listen(3000,function(){
     console.log("Server started on port 3000");
 });
+
