@@ -2,6 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const date = require(__dirname + "/date.js");
+//console.log(date);
 //Using EJS template 
 app.set("view engine", "ejs");
 //Use the body parser
@@ -11,33 +13,26 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
 //-------------------------------------------------
 //Variables 
-var items = ["Buy Food", "Cook Food", "Eat Food"];
-let workItems = [];
+const items = ["Buy Food", "Cook Food", "Eat Food"];
+const workItems = [];
 //-------------------------------------------------
 //App
 app.get("/", function(req,res){
-    var today = new Date();
-    var options = {
-        weekday: "long",
-        year: 'numeric',
-        day: "numeric",
-        month: "long"
-    };
-    var day = today.toLocaleDateString("en-US", options);
-
+    const day = date.getDate();
     res.render('list', {listTitle: day, newlistItems: items});
 });
 
 app.post("/", function(req,res){
     console.log(req.body);
-    var item = req.body.newItem;
-    console.log(item);
-    if(req.body.list === "Work"){
-        workItems.push(item);
-        res.redirect("/work");//redirect to work
-    } else {
-        items.push(item);
-        res.redirect("/");//redirect to home route
+    const item = req.body.newItem;
+    if(item.trim().length !== 0){//check for empty item
+        if(req.body.list === "Work"){
+            workItems.push(item);
+            res.redirect("/work");//redirect to work
+        } else {
+            items.push(item);
+            res.redirect("/");//redirect to home route
+        }
     }
 });
 
