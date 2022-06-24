@@ -12,6 +12,7 @@ app.use(express.static("public"));
 //-------------------------------------------------
 //Variables 
 var items = ["Buy Food", "Cook Food", "Eat Food"];
+let workItems = [];
 //-------------------------------------------------
 //App
 app.get("/", function(req,res){
@@ -24,17 +25,30 @@ app.get("/", function(req,res){
     };
     var day = today.toLocaleDateString("en-US", options);
 
-    res.render('list', {kindOfDay: day, newlistItems: items});
+    res.render('list', {listTitle: day, newlistItems: items});
 });
 
 app.post("/", function(req,res){
-var item = req.body.newItem;
-console.log(item);
-items.push(item);
-res.redirect("/");//redirect to home route
+    console.log(req.body);
+    var item = req.body.newItem;
+    console.log(item);
+    if(req.body.list === "Work"){
+        workItems.push(item);
+        res.redirect("/work");//redirect to work
+    } else {
+        items.push(item);
+        res.redirect("/");//redirect to home route
+    }
+});
+
+app.get("/work",function(req,res){
+    res.render("list", {listTitle: "Work List", newlistItems: workItems})
+});
+
+app.get("/about", function(req,res){
+    res.render("about");
 });
 
 app.listen(3000,function(){
     console.log("Server started on port 3000");
 });
-
