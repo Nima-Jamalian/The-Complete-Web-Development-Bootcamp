@@ -7,6 +7,8 @@ app.set("view engine", "ejs");
 //Use the body parser
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+//Serve the public folder
+app.use(express.static("public"));
 //-------------------------------------------------
 //Variables 
 var items = ["Buy Food", "Cook Food", "Eat Food"];
